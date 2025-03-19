@@ -27,6 +27,15 @@ header {
 
 .menu-btn {
 	order: 1;
+	width: 68px;
+	height: 68px;
+	background-color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 17px 19px;
+	border: none
 }
 
 .navigation {
