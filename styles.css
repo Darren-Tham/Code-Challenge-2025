@@ -15,13 +15,15 @@ body {
 }
 
 header {
+	height: 60px;
 	position: relative;
 	display: flex;
 	gap: 2em;
 	justify-content: space-between;
-	padding: 20px;
+	align-items: center;
+	padding: 20px 48px;
 	border-radius: 0.5em;
-	background-color: orange;
+	background-color: var(--orange-hex);
 	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 }
 
