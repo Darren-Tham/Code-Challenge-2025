@@ -1,16 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menu = document.getElementById('menu');
     const menuBtn = document.getElementById('menu-btn');
+    const menuBtnIcon = document.getElementById('menu-btn-icon');
 
     function toggleMenu() {
-        if (menu.style.display === 'none') {
-            menu.style.display = 'block';
+        if (menu.style.opacity === '0' && menu.style.visibility === 'hidden') {
+            menu.style.opacity = '1';
+            menu.style.visibility = 'visible';
+            menuBtnIcon.src = 'assets/xmark.svg';
         } else {
-            menu.style.display = 'none';
+            menu.style.opacity = '0';
+            menu.style.visibility = 'hidden';
+            menuBtnIcon.src = 'assets/bars.svg';
         }
     }
 
-    menu.addEventListener('click', toggleMenu);
+    menuBtn.addEventListener('click', toggleMenu);
 });
 
 document

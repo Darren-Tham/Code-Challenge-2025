@@ -44,9 +44,9 @@ header {
 .navigation {
 	flex-grow: 1;
 	margin-left: auto;
-	opacity: 0;
 	transition:
 		opacity 300ms ease,
+		visibility 300ms ease,
 		transform 300ms ease;
 
 	@media screen and (max-width: 950px) {
