@@ -153,7 +153,6 @@ header {
 }
 
 #hero-image {
-    max-height: 354px;
     width: auto;
     max-width: 100%;
     place-self: center;
