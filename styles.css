@@ -27,6 +27,18 @@ header {
 	box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.25);
 }
 
+/*
+ * The image has a height of 21 pixels that overlaps with the logo,
+ * resulting in an additional 5 pixels being added to the wrapper logo's
+ * dimensions. This misalignment causes the logo to appear off-center. By
+ * applying a flex display property, the image element fully encapsulates
+ * the logo, ensuring no pixels extend beyond the intended boundaries and
+ * maintaining proper alignment.
+ */
+.logo-picture {
+	display: flex;
+}
+
 .menu-btn {
 	order: 1;
 	width: 68px;
