@@ -217,21 +217,6 @@ footer {
     height: 21px;
 }
 
-
-.width-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-inline: 3em;
-
-    @media screen and (max-width: 1000px) {
-        padding-inline: 2em;
-    }
-
-    @media screen and (max-width: 700px) {
-        padding-inline: 1em;
-    }
-}
-
 /*
  * The purpose of this class is to center the
  * header wrapper after changing its height from
@@ -261,6 +246,20 @@ footer {
         @media screen and (max-width: 950px) {
             grid-template-columns: 1fr;
         }
+    }
+}
+
+.width-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-inline: 3em;
+
+    @media screen and (max-width: 1000px) {
+        padding-inline: 2em;
+    }
+
+    @media screen and (max-width: 700px) {
+        padding-inline: 1em;
     }
 }
 
