@@ -120,7 +120,8 @@ header {
 .cta-btn {
     display: inline-block;
     text-decoration: none;
-
+    margin-top: 24px;
+    height: 48px;
     &:hover,
     &:focus {
         background-color: var(--orange-hex);
@@ -131,13 +132,11 @@ header {
 .content-container {
     margin-block: 0;
     font-size: 1.25em;
+    line-height: 32px;
+    letter-spacing: 0.5px;
 
     @media screen and (max-width: 950px) {
         font-size: 1em;
-    }
-
-    & + .btn-wrapper {
-        margin-top: 1rem;
     }
 }
 
