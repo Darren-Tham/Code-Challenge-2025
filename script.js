@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function handleMenuBtnClick() {
     const menu = document.getElementById('menu');
     const menuBtn = document.getElementById('menu-btn');
     const menuBtnIcon = document.getElementById('menu-btn-icon');
@@ -16,6 +16,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     menuBtn.addEventListener('click', toggleMenu);
+}
+
+function handleHeroImageResize() {
+    const heroImage = document.getElementById('hero-image');
+    if (window.innerWidth < 950) {
+        heroImage.src = 'assets/image-mobile.jpg';
+    } else {
+        heroImage.src = 'assets/image@2x.jpg';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    handleMenuBtnClick();
+    handleHeroImageResize();
+    window.addEventListener('resize', handleHeroImageResize);
 });
 
 document
