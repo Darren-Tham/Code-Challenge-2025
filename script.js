@@ -76,9 +76,21 @@ function handleFormSubmit() {
     });
 }
 
+function handleScrollToTop() {
+    document
+        .getElementById('back-to-top')
+        .addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     handleMenuBtnClick();
     handleFormSubmit();
+    handleScrollToTop();
     handleHeroImageResize();
     window.addEventListener('resize', handleHeroImageResize);
 });
