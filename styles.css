@@ -108,12 +108,8 @@ header {
     line-height: 76px;
 }
 
-.btn {
+.cta-btn {
     display: inline-block;
-    padding: 1em 1.5em;
-    border: 1px solid;
-    border-radius: 3em;
-    color: currentcolor;
     text-decoration: none;
 
     &:hover,
@@ -252,7 +248,7 @@ section {
     max-width: 500px;
 }
 
-.form-outline {
+.outline {
     box-sizing: border-box;
     padding: 12px 20px;
     border: 1px solid var(--dark-gray-hex);
