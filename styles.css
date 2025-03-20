@@ -47,7 +47,7 @@ header {
     order: 1;
     width: 68px;
     height: 68px;
-    background-color: white;
+    background-color: var(--white-hex);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -101,7 +101,7 @@ header {
 
 .navigation-list-a {
     text-decoration: none;
-    color: white;
+    color: var(--white-hex);
     font-size: 24px;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -118,8 +118,8 @@ header {
 
     &:hover,
     &:focus {
-        background-color: orange;
-        color: white;
+        background-color: var(--orange-hex);
+        color: var(--white-hex);
     }
 }
 
@@ -236,7 +236,6 @@ section {
     border: 1px solid var(--dark-gray-hex);
     border-radius: 50px;
     font-size: 1em;
-    font-weight: 400;
     color: var(--dark-gray-hex);
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -245,7 +244,7 @@ section {
 .form-input {
     width: 500px;
     height: 48px;
-    background-color: rgba(50, 56, 72, 0.05);
+    background-color: rgba(var(--dark-gray-rgb), 0.05);
 }
 
 .form-input::placeholder {
