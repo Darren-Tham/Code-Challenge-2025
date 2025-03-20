@@ -22,12 +22,16 @@ function handleMenuBtnClick() {
 
 function handleHeroImageResize() {
     const heroImage = document.getElementById('hero-image');
-    if (window.innerWidth <= 950) {
+    if (window.innerWidth <= 564) {
         heroImage.src = 'assets/image-mobile.jpg';
         heroImage.alt = 'Mobile Hero Image for A Totally Real Company';
+    } else if (window.innerWidth <= 950) {
+        heroImage.src = 'assets/image.jpg';
+        heroImage.alt = 'Desktop Hero Image for A Totally Real Company';
     } else {
         heroImage.src = 'assets/image@2x.jpg';
-        heroImage.alt = 'Desktop Hero Image for A Totally Real Company';
+        heroImage.alt =
+            'High-Definition Desktop Hero Image for A Totally Real Company';
     }
 }
 
