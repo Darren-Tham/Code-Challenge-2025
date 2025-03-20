@@ -180,12 +180,17 @@ img {
 footer {
     position: relative;
     padding: 22px;
+    margin-top: 89px;
     border-radius: 0.5em;
     background-color: var(--dark-gray-hex);
     text-align: center;
     color: var(--white-hex);
     font-size: 1em;
     line-height: 24px;
+
+    @media screen and (max-width: 950px) {
+        margin-top: 114px;
+    }
 }
 
 #back-to-top {
