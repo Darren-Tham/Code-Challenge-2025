@@ -41,6 +41,30 @@ img {
     letter-spacing: 0.03125em;
 }
 
+/*
+ * .sr-only (Screen Reader Only)
+ *
+ * This class is used to hide content visually while keeping
+ * it accessible to screen readers. It is particularly useful
+ * for providing additional context or labels to assistive
+ * technologies without cluttering the visual interface.
+ *
+ * This is taken from the Stanford University IT Office of
+ * Digital Accessibility "Screen Reader-Only Content" page.
+ * https://uit.stanford.edu/accessibility/concepts/screen-reader-only-content
+ */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
+    border: 0;
+}
+
 /****************************** Header ******************************/
 
 header {

@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Broken Page</title>
+        <title>A Totally Real Company</title>
         <link rel="stylesheet" href="styles.css" />
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -14,7 +14,7 @@
         />
     </head>
     <body>
-        <header>
+        <header role="banner">
             <a href="/">
                 <picture class="logo-picture">
                     <img
@@ -27,18 +27,27 @@
                 </picture>
             </a>
 
-            <button id="menu-btn" class="menu-btn">
+            <button
+                id="menu-btn"
+                class="menu-btn"
+                aria-expanded="false"
+                aria-controls="menu"
+            >
                 <img
                     id="menu-btn-icon"
                     src="assets/bars.svg"
                     alt="Menu Button"
+                    aria-hidden="true"
                 />
+                <span class="sr-only">Menu</span>
             </button>
 
             <nav
                 id="menu"
                 class="navigation"
                 style="opacity: 0; visibility: hidden"
+                role="navigation"
+                aria-label="Main Navigation"
             >
                 <ul class="navigation-list">
                     <li><a class="navigation-list-a" href="#">Home</a></li>
@@ -48,8 +57,8 @@
             </nav>
         </header>
 
-        <main>
-            <section class="content">
+        <main role="main">
+            <section class="content" aria-labelledby="content-heading">
                 <div class="width-container">
                     <div class="column column-1">
                         <p class="section-subtitle">Example Subtitle</p>
@@ -64,11 +73,15 @@
                         </p>
                         <a href="#" class="outline cta-btn">Example CTA</a>
                     </div>
-                    <img id="hero-image" src="assets/image@2x.jpg" />
+                    <img
+                        id="hero-image"
+                        src="assets/image@2x.jpg"
+                        alt="Hero Image"
+                    />
                 </div>
             </section>
 
-            <section>
+            <section aria-labelledby="form-heading">
                 <div class="width-container">
                     <div class="form-heading-container">
                         <div class="form-header-wrapper">
@@ -81,35 +94,60 @@
                             </p>
                         </div>
 
-                        <form id="contact-form" class="contact-form">
+                        <form
+                            id="contact-form"
+                            class="contact-form"
+                            aria-label="Contact Form"
+                        >
+                            <label for="name" class="sr-only">Name</label>
                             <input
                                 class="outline form-input"
                                 type="text"
                                 id="name"
+                                name="name"
                                 placeholder="Name"
+                                aria-required="true"
                             />
-                            <p id="name-error" class="error-message" style="display: none;">Name cannot be empty</p>
+                            <p
+                                role="alert"
+                                id="name-error"
+                                class="error-message"
+                                style="display: none"
+                            >
+                                Name cannot be empty
+                            </p>
+                            <label for="email" class="sr-only">Email</label>
                             <input
                                 class="outline form-input"
                                 type="email"
                                 id="email"
+                                name="email"
                                 placeholder="Email"
+                                aria-required="true"
                             />
-                            <p id="email-error" class="error-message" style="display: none;"></p>
-                            <button class="outline" id="submit">Submit</button>
+                            <p
+                                role="alert"
+                                id="email-error"
+                                class="error-message"
+                                style="display: none"
+                            ></p>
+                            <button type="submit" class="outline" id="submit">
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>
             </section>
         </main>
 
-        <footer>
+        <footer role="contentinfo">
             <p>©2025 - DynamiX</p>
-            <a href="#" id="back-to-top">
+            <a href="#" id="back-to-top" aria-label="Back To Top">
                 <img
                     class="arrow-icon"
                     src="assets/arrow-up.svg"
                     alt="Back-To-Top Button"
+                    aria-hidden="true"
                 />
             </a>
         </footer>

@@ -8,10 +8,12 @@ function handleMenuBtnClick() {
             menu.style.opacity = '1';
             menu.style.visibility = 'visible';
             menuBtnIcon.src = 'assets/xmark.svg';
+            menuBtn.setAttribute('aria-expanded', 'true');
         } else {
             menu.style.opacity = '0';
             menu.style.visibility = 'hidden';
             menuBtnIcon.src = 'assets/bars.svg';
+            menuBtn.setAttribute('aria-expanded', 'false');
         }
     }
 
@@ -22,8 +24,10 @@ function handleHeroImageResize() {
     const heroImage = document.getElementById('hero-image');
     if (window.innerWidth <= 950) {
         heroImage.src = 'assets/image-mobile.jpg';
+        heroImage.alt = 'Mobile Hero Image for A Totally Real Company';
     } else {
         heroImage.src = 'assets/image@2x.jpg';
+        heroImage.alt = 'Desktop Hero Image for A Totally Real Company';
     }
 }
 
@@ -83,7 +87,9 @@ window.onscroll = function () {
     const backToTopButton = document.getElementById('back-to-top');
     if (window.scrollY > 500) {
         backToTopButton.style.visibility = 'visible';
+        backToTopButton.setAttribute('aria-hidden', 'false');
     } else {
         backToTopButton.style.visibility = 'hidden';
+        backToTopButton.setAttribute('aria-hidden', 'true');
     }
 };
