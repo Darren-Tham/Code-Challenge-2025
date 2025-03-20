@@ -189,6 +189,25 @@ section {
 	}
 }
 
+/*
+ * The purpose of this class is to center the
+ * header wrapper after changing its height from
+ * the full width of .width-container to 612px.
+ * Additionally, it adds a gap between the
+ * heading wrapper and the form.
+ */
+.heading-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 64px;
+}
+
+.header-wrapper {
+	width: 612px;
+	text-align: center;
+}
+
 .content {
 	.width-container {
 		display: grid;
