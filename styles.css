@@ -141,7 +141,7 @@ header {
 }
 
 .section-title {
-    margin-block: 0;
+    margin: 0 0 1rem 0;
     font-weight: 700;
     font-size: 3.75em;
     line-height: 76px;
@@ -151,20 +151,16 @@ header {
         font-size: 1.5em;
         line-height: 24px;
     }
-
-    & + .content-container {
-        margin-top: 1rem;
-    }
 }
 
 .section-subtitle {
-    margin-block: 0;
+    margin: 0 0 0.5rem 0;
     font-weight: 500;
     font-size: 1.25em;
+    line-height: 22px;
+    letter-spacing: 0.15px;
+}
 
-    & + .section-title {
-        margin-top: 0.5rem;
-    }
 }
 
 button {
