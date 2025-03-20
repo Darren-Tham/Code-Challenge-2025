@@ -144,6 +144,13 @@ header {
     margin-block: 0;
     font-weight: 700;
     font-size: 3.75em;
+    line-height: 76px;
+    letter-spacing: 0.5px;
+
+    @media screen and (max-width: 950px) {
+        font-size: 1.5em;
+        line-height: 24px;
+    }
 
     & + .content-container {
         margin-top: 1rem;
