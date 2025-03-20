@@ -174,11 +174,11 @@ header {
     margin: 0 auto;
     padding-inline: 3em;
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 950px) {
         padding-inline: 2em;
     }
 
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 560px) {
         padding-inline: 1em;
     }
 }
@@ -199,6 +199,11 @@ header {
     letter-spacing: 0.03125rem;
 
     @media screen and (max-width: 950px) {
+        font-size: 2.5em;
+        line-height: 3.5rem;
+    }
+
+    @media screen and (max-width: 560px) {
         font-size: 1.5em;
         line-height: 1.5rem;
     }
@@ -211,6 +216,10 @@ header {
     letter-spacing: 0.03125rem;
 
     @media screen and (max-width: 950px) {
+        font-size: 1.125em;
+    }
+
+    @media screen and (max-width: 560px) {
         font-size: 1em;
     }
 }
