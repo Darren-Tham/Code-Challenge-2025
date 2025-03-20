@@ -20,7 +20,8 @@ body {
 }
 
 header {
-    height: 60px;
+    box-sizing: border-box;
+    height: 100px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -33,6 +34,10 @@ header {
 	 * In the Figma, the header has a y-value of 4px.
 	 */
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-width: 950px) {
+        padding: 16px;
+    }
 }
 
 /*
