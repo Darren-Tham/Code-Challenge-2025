@@ -214,10 +214,6 @@ footer {
 }
 
 /*
- * The purpose of this class is to center the
- * header wrapper after changing its height from
- * the full width of .width-container to 612px.
- * Additionally, it adds a gap between the
  * When setting a fixed height for the header wrapper,
  * it justifies the content to the left. The purpose of
  * this class is to center the header wrapper. Additionally,
@@ -236,6 +232,7 @@ footer {
 
     @media screen and (max-width: 950px) {
         text-align: left;
+        max-width: 100%;
     }
 }
 
@@ -275,7 +272,7 @@ footer {
     width: 31.25em;
     max-width: 100%;
 
-    @media screen and (max-width: 950px) {
+    @media screen and (max-width: 564px) {
         align-items: start;
     }
 }
