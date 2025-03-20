@@ -20,7 +20,7 @@ function handleMenuBtnClick() {
 
 function handleHeroImageResize() {
     const heroImage = document.getElementById('hero-image');
-    if (window.innerWidth < 950) {
+    if (window.innerWidth <= 950) {
         heroImage.src = 'assets/image-mobile.jpg';
     } else {
         heroImage.src = 'assets/image@2x.jpg';
@@ -80,7 +80,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 window.onscroll = function () {
+    const backToTopButton = document.getElementById('back-to-top');
     if (window.scrollY > 500) {
-        document.getElementById('back-to-top').style.display = 'block';
+        backToTopButton.style.visibility = 'visible';
+    } else {
+        backToTopButton.style.visibility = 'hidden';
     }
 };
