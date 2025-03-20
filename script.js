@@ -27,18 +27,57 @@ function handleHeroImageResize() {
     }
 }
 
+function handleFormSubmit() {
+    const form = document.getElementById('contact-form');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const nameError = document.getElementById('name-error');
+        const email = document.getElementById('email').value.trim();
+        const emailError = document.getElementById('email-error');
+
+        let isError = false;
+        if (name === '') {
+            nameError.style.display = 'block';
+            isError = true;
+        } else {
+            nameError.style.display = 'none';
+        }
+
+        if (email === '') {
+            emailError.style.display = 'block';
+            emailError.textContent = 'Email cannot be empty';
+            isError = true;
+        } else if (!email.includes('@')) {
+            emailError.style.display = 'block';
+            emailError.textContent = "Email must include an '@'";
+            isError = true;
+        } else if (email[0] === '@') {
+            emailError.style.display = 'block';
+            emailError.textContent = "A part must come before the '@'";
+            isError = true;
+        } else if (email[email.length - 1] === '@') {
+            emailError.style.display = 'block';
+            emailError.textContent = "A part must follow the '@'";
+            isError = true;
+        } else {
+            emailError.style.display = 'none';
+        }
+
+        if (!isError) {
+            alert('Form submitted!');
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     handleMenuBtnClick();
+    handleFormSubmit();
     handleHeroImageResize();
     window.addEventListener('resize', handleHeroImageResize);
 });
-
-document
-    .getElementById('contact-form')
-    .addEventListener('submit', function (event) {
-        event.preventDefault();
-        alert('Form submitted!');
-    });
 
 window.onscroll = function () {
     if (window.scrollY > 500) {

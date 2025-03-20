@@ -315,3 +315,12 @@ footer {
     height: 48px;
     background-color: transparent;
 }
+
+.error-message {
+    color: red;
+    font-size: 0.875em;
+    letter-spacing: 0.03125em;
+    align-self: flex-start;
+    padding-left: 1em;
+    margin: 0.5em 0 0 0;
+}
