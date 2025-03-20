@@ -19,7 +19,6 @@ header {
 	height: 60px;
 	position: relative;
 	display: flex;
-	gap: 2em;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 48px;
@@ -68,6 +67,8 @@ header {
 }
 
 .navigation-list {
+	margin: 0;
+	list-style: none;
 	display: flex;
 	gap: 34px;
 	justify-content: flex-end;
@@ -144,10 +145,6 @@ button {
 img {
 	width: 100%;
 	height: auto;
-}
-
-ul {
-	list-style: none;
 }
 
 #menu {
