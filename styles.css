@@ -1,34 +1,34 @@
 :root {
-	--dark-gray-hex: #323848;
-	--dark-gray-rgb: 50, 56, 72;
-	--orange-hex: #f79233;
-	--orange-rgb: 247, 146, 51;
-	--white-hex: #fff;
-	--white-rgb: 255, 255, 255;
+    --dark-gray-hex: #323848;
+    --dark-gray-rgb: 50, 56, 72;
+    --orange-hex: #f79233;
+    --orange-rgb: 247, 146, 51;
+    --white-hex: #fff;
+    --white-rgb: 255, 255, 255;
 }
 
 body {
-	margin: 10px 20px;
-	background: var(--white-hex);
-	color: var(--dark-gray-hex);
-	font-size: 16px;
-	font-family: 'DM Sans', Arial, sans-serif;
+    margin: 10px 20px;
+    background: var(--white-hex);
+    color: var(--dark-gray-hex);
+    font-size: 16px;
+    font-family: 'DM Sans', Arial, sans-serif;
 }
 
 header {
-	height: 60px;
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 48px;
-	border-radius: 8px;
-	background-color: var(--orange-hex);
+    height: 60px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    border-radius: 8px;
+    background-color: var(--orange-hex);
 
-	/*
+    /*
 	 * In the Figma, the header has a y-value of 4px.
 	 */
-	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.25);
 }
 
 /*
@@ -40,153 +40,155 @@ header {
  * maintaining proper alignment.
  */
 .logo-picture {
-	display: flex;
+    display: flex;
 }
 
 .menu-btn {
-	order: 1;
-	width: 68px;
-	height: 68px;
-	background-color: white;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 17px 19px;
-	border: none
+    order: 1;
+    width: 68px;
+    height: 68px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 17px 19px;
+    border: none;
 }
 
 .navigation {
-	flex-grow: 1;
-	margin-left: auto;
-	transition:
-		opacity 300ms ease,
-		visibility 300ms ease,
-		transform 300ms ease;
+    flex-grow: 1;
+    margin-left: 16px;
+    /*
+	 * In the "Desktop - Open" page in the Figma, you can see
+	 * that there is a 45.23px gap between the navigation
+	 * and the menu button.
+	 */
+    margin-right: 43.61px;
+    padding-right: 16px;
+    transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
 
-	@media screen and (max-width: 950px) {
-		position: absolute;
-		top: 100%;
-		left: 0;
-		width: calc(100% - 20px);
-		transform: translate(0, -2em);
-	}
+    @media screen and (max-width: 950px) {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: calc(100% - 20px);
+        transform: translate(0, -2em);
+    }
 
-	&.visible {
-		opacity: 1;
-		pointer-events: auto;
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
 
-		@media screen and (max-width: 950px) {
-			transform: translate(0, 0);
-		}
-	}
+        @media screen and (max-width: 950px) {
+            transform: translate(0, 0);
+        }
+    }
 }
 
 .navigation-list {
-	margin: 0;
-	list-style: none;
-	display: flex;
-	gap: 34px;
-	justify-content: flex-end;
-	align-items: center;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 34px;
+    justify-content: flex-end;
+    align-items: center;
 
-	@media screen and (max-width: 950px) {
-		flex-direction: column;
-	}
+    @media screen and (max-width: 950px) {
+        flex-direction: column;
+    }
 }
 
 .navigation-list-a {
-	text-decoration: none;
-	color: white;
-	font-size: 24px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
-	line-height: 76px;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 76px;
 }
 
 .btn {
-	display: inline-block;
-	padding: 1em 1.5em;
-	border: 1px solid;
-	border-radius: 3em;
-	color: currentcolor;
-	text-decoration: none;
+    display: inline-block;
+    padding: 1em 1.5em;
+    border: 1px solid;
+    border-radius: 3em;
+    color: currentcolor;
+    text-decoration: none;
 
-	&:hover,
-	&:focus {
-		background-color: orange;
-		color: white;
-	}
+    &:hover,
+    &:focus {
+        background-color: orange;
+        color: white;
+    }
 }
 
 .content-container {
-	margin-block: 0;
-	font-size: 1.25em;
+    margin-block: 0;
+    font-size: 1.25em;
 
-	@media screen and (max-width: 950px) {
-		font-size: 1em;
-	}
+    @media screen and (max-width: 950px) {
+        font-size: 1em;
+    }
 
-	& + .btn-wrapper {
-		margin-top: 1rem;
-	}
+    & + .btn-wrapper {
+        margin-top: 1rem;
+    }
 }
 
 .section-title {
-	margin-block: 0;
-	font-weight: 700;
-	font-size: 3.75em;
+    margin-block: 0;
+    font-weight: 700;
+    font-size: 3.75em;
 
-	& + .content-container {
-		margin-top: 1rem;
-	}
+    & + .content-container {
+        margin-top: 1rem;
+    }
 }
 
 .section-subtitle {
-	margin-block: 0;
-	font-weight: 500;
-	font-size: 1.25em;
+    margin-block: 0;
+    font-weight: 500;
+    font-size: 1.25em;
 
-	& + .section-title {
-		margin-top: 0.5rem;
-	}
+    & + .section-title {
+        margin-top: 0.5rem;
+    }
 }
 
 button {
-	padding: 10px;
-	font-size: 18px;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
 footer {
-	padding: 20px;
-	border-radius: 0.5em;
-	background: #222;
-	color: #333;
-	text-align: center;
+    padding: 20px;
+    border-radius: 0.5em;
+    background: #222;
+    color: #333;
+    text-align: center;
 }
 
 section {
-	padding-block: 4em;
+    padding-block: 4em;
 }
 
 .width-container {
-	max-width: 1400px;
-	margin: 0 auto;
-	padding-inline: 3em;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-inline: 3em;
 
-	@media screen and (max-width: 1000px) {
-		padding-inline: 2em;
-	}
+    @media screen and (max-width: 1000px) {
+        padding-inline: 2em;
+    }
 
-	@media screen and (max-width: 700px) {
-		padding-inline: 1em;
-	}
+    @media screen and (max-width: 700px) {
+        padding-inline: 1em;
+    }
 }
 
 /*
@@ -197,28 +199,28 @@ section {
  * heading wrapper and the form.
  */
 .heading-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
 }
 
 .header-wrapper {
-	width: 612px;
-	text-align: center;
+    width: 612px;
+    text-align: center;
 }
 
 .content {
-	.width-container {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 2em 4em;
-		align-items: center;
+    .width-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em 4em;
+        align-items: center;
 
-		@media screen and (max-width: 950px) {
-			grid-template-columns: 1fr;
-		}
-	}
+        @media screen and (max-width: 950px) {
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 #contact-form {
